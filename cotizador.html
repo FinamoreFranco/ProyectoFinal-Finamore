@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cotizador RPG - Hunter x Hunter</title>
+  <link rel="stylesheet" href="assets/cotizador.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+<div id="app-nav"></div>
+  <h1>📜 Cotizador de Misiones 📜 </h1>
+
+  <label for="tipoMision">Tipo de Misión:</label>
+  <select id="tipoMision">
+    <option value="rescate">Rescate</option>
+    <option value="asesinato">Asesinato</option>
+    <option value="exploracion">Exploración</option>
+    <option value="recoleccion">Recolección</option>
+    <option value="escolta">Escolta</option>
+  </select>
+
+  <label for="dificultad">Dificultad:</label>
+  <select id="dificultad">
+    <option value="S">S</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+  </select>
+
+  <div id="seccionDias" style="display: none;">
+    <label for="dias">Número de Días:</label>
+    <input type="number" id="dias" min="1" value="1"/>
+  </div>
+
+  <button onclick="calcular()">Calcular Cotización</button>
+  <button onclick="limpiarHistorial()">Limpiar Historial</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <h2>📜 Historial de Misiones Cotizadas</h2>
+  <div id="historial"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/cotizar.js"></script>
+<script src="js/nav.js" defer></script>
+</body>
+</html>

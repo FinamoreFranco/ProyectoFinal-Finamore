@@ -1,0 +1,133 @@
+/* === VARIABLES GLOBALES - ESTILO HUNTER X HUNTER === */
+:root {
+    --bg-main: #1c1c1c;
+    --bg-input: #2a2a2a;
+    --text-color: #e0e0e0;
+    --text-muted: #aaa;
+
+    --primary-color: #00d8ff;
+    --primary-hover: #00ffd1;
+    --primary-dark: #00b3cc;
+
+    --accent-color: #ffaa00;
+    --border-radius: 4px;
+    --transition-speed: 0.3s;
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-title: 'Arial Black', sans-serif;
+    --font-size-base: 1em;
+    --font-size-large: 1.4em;
+}
+
+/* === ESTILO GENERAL === */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-weight: normal;
+    font-size: 2em;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: var(--font-size-base);
+    color: var(--text-muted);
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-input);
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    outline: none;
+    transition: var(--transition-speed) ease all;
+}
+
+select:focus,
+input:focus {
+    border-bottom: 2px solid var(--primary-hover);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 0.5rem;
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    font-size: calc(var(--font-size-base) + 0.2em);
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition-speed) ease background-color;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.resultado {
+    margin-top: 30px;
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    background-color: #222;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+#historial > div {
+    background: #222;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* === NAVBAR === */
+.navbar {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.navbar-list li {
+    display: inline-block;
+}
+
+.navbar-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-list a:hover {
+    color: var(--primary-hover);
+}

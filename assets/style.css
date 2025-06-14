@@ -1,0 +1,316 @@
+/* Fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* === VARIABLES GLOBALES - ESTILO HUNTER X HUNTER === */
+:root {
+    --bg-main: #1c1c1c; 
+    --bg-input: #2a2a2a;
+    --text-color: #e0e0e0;
+    --text-muted: #aaa;
+
+    --primary-color: #00d8ff;
+    --primary-hover: #00ffd1;
+    --primary-dark: #00b3cc;
+
+    --accent-color: #ffaa00;
+    --border-radius: 4px;
+    --transition-speed: 0.3s;
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-title: 'Arial Black', sans-serif;
+    --font-size-base: 1em;
+    --font-size-large: 1.4em;
+}
+
+/* === ESTILO GENERAL === */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    font-family: 'Orbitron', var(--font-main);
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: var(--font-size-base);
+    color: var(--text-muted);
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-input);
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    outline: none;
+    transition: var(--transition-speed) ease all;
+}
+
+select:focus,
+input:focus {
+    border-bottom: 2px solid var(--primary-hover);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 0.5rem;
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    font-size: calc(var(--font-size-base) + 0.2em);
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition-speed) ease background-color;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Estilo para resultado */
+.resultado {
+    margin-top: 30px;
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    background-color: #222;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+/* Menú de navegación */
+.navbar {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.navbar-list li {
+    display: inline-block;
+}
+
+.navbar-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-list a:hover {
+    color: var(--primary-hover);
+}
+
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-weight: normal;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 6px rgba(0, 216, 255, 0.2);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* === SECCIÓN PRINCIPAL === */
+.container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nameInputSection {
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.1);
+}
+
+.nameInputSection label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-size: var(--font-size-base);
+    color: var(--text-muted);
+}
+
+.nameInputSection input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-input);
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    border-bottom: 2px solid var(--primary-color);
+    transition: border-color var(--transition-speed) ease;
+}
+
+.nameInputSection input:focus {
+    border-bottom-color: var(--primary-hover);
+    outline: none;
+}
+
+.nameInputSection button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.nameInputSection button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* === TARJETAS DE CLASES === */
+.job-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 1.5rem; /* espacio entre tarjetas */
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.job-card {
+    background-color: #222;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(0, 216, 255, 0.2);
+}
+
+.job-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.job-card img:hover {
+    box-shadow: 0 0 15px rgba(0, 216, 255, 0.5);
+}
+
+.job-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.job-card button {
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.job-card button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* === RESULTADO DE LA CLASE SELECCIONADA === */
+.job-result {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: var(--font-size-large);
+    text-shadow: 0 0 4px rgba(0, 216, 255, 0.2);
+}
+
+.job-result img {
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.4);
+}
+
+/* === BOTÓN DE REINICIO === */
+#resetGameBtn {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #111;
+    border: none;
+    font-size: var(--font-size-base);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+#resetGameBtn:hover {
+    background-color: #ffa500;
+}
+
+
+#classTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#classTitle span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
